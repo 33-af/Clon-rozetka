@@ -1,11 +1,14 @@
 //АЯКС ЗАПРОС В ООП НА ОСНОВЕ КЛАССОВ
 
+const API_URL = "https://clon-rozetka.onrender.com/api/products";
+
 
 
 class ProductService {
-    constructor(apiUrl = API_URL ) {
+    constructor(apiUrl = API_URL) {
         this.apiUrl = apiUrl;
     }
+
 
     async fetchProducts() {
         return new Promise((resolve, reject) => {
