@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../frontend/assets/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-left">
+                    <img src="./assets/img/burger.png" alt="header-burger-menu" class="header-burger-menu">
+                    <div class="header-logo">
+                        <img src="./assets/img/logo.png" alt="header-logo">
+                    </div>
+                    <button class="header-catalog__button">
+                        <i class="fa-solid fa-border-all catalog-item"></i> Каталог
+                    </button>
+                </div>
+
+                <div class="header-search__form">
+                    <div class="input-wrapper">
+                        <img src="./assets/img/search-icon.png" alt="search-icon" class="search-icon">
+                        <input type="text" class="input-search" id="input-search" placeholder="Я шукаю...">
+                        <img src="./assets/img/voice-icon.png" alt="search-voice-icon" class="voice-icon">
+                    </div>
+                    <button type="button" class="search-button">Пошук</button>
+                </div>
+
+                <div class="header-right">
+                    <div class="header-lang-block">
+                        <div class="header-language">UA</div>
+                        <img src="./assets/img/down-arrow.png" alt="down-arrow-icon" class="language-icon">
+                    </div>
+                    <div class="header-lang-block header-profile">
+                        <img src="./assets/img/user.png" alt="user-icon" class="user-icon">
+                    </div>
+                    <div class="header-lang-block header-cart">
+                        <img src="./assets/img/header-cart.png" alt="cart-icon" class="cart-icon" id="cart-icon">
+                        <span class="cart-quantity" id="cart-quantity">0</span>
+                    </div>
+
+                    <div class="modal" id="cartModal">
+                        <div class="cart">
+                            <div class="cart-header">
+                                <h2>Кошик</h2>
+                                <button id="closeCartButton">✕</button>
+                            </div>
+                            <div class="cart-content">
+                            </div>
+                            <div class="cart-footer"> 
+                                <button class="continue-shopping">Продолжить покупки</button>
+                                <div class="total-section">
+                                    <span class="total-price"></span> 
+                                    <button class="checkout">Оформить заказ</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="product-detail">
+        <div id="productDetailContainer" class="productDetailContainer">
+        </div>
+    </div>
+    <script src="../frontend/assets/js/cartModal.js"></script>
+    <script src="../frontend/assets/js/API.js"></script>
+    <script  src="../frontend/assets/js/main.js"></script>
+    <script src="../frontend/assets/js/product-detail.js"></script>
+</body>
+</html>

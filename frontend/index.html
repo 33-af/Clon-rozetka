@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../frontend/assets/css/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Eccomerce</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-left">
+                    <img src="./assets/img/burger.png" alt="header-burger-menu" class="header-burger-menu">
+                    <div class="header-logo">
+                        <img src="./assets/img/logo.png" alt="header-logo">
+                    </div>
+                    <button class="header-catalog__button">
+                        <i class="fa-solid fa-border-all catalog-item"></i> Каталог
+                    </button>
+                </div>
+
+                <div class="header-search__form">
+                    <div class="input-wrapper">
+                        <img src="./assets/img/search-icon.png" alt="search-icon" class="search-icon">
+                        <input type="text" class="input-search" id="input-search" placeholder="Я шукаю...">
+                        <img src="./assets/img/voice-icon.png" alt="search-voice-icon" class="voice-icon">
+                    </div>
+                    <button type="button" class="search-button">Пошук</button>
+                </div>
+
+                <div class="header-right">
+                    <div class="header-lang-block">
+                        <div class="header-language">UA</div>
+                        <img src="./assets/img/down-arrow.png" alt="down-arrow-icon" class="language-icon">
+                    </div>
+                    <div class="header-lang-block header-profile">
+                        <img src="./assets/img/user.png" alt="user-icon" class="user-icon">
+                    </div>
+                    <div class="header-lang-block header-cart">
+                        <img src="./assets/img/header-cart.png" alt="cart-icon" class="cart-icon" id="cart-icon">
+                        <span class="cart-quantity" id="cart-quantity">0</span>
+                    </div>
+
+                    <div class="modal" id="cartModal">
+                        <div class="cart">
+                            <div class="cart-header">
+                                <h2>Кошик</h2>
+                                <button id="closeCartButton">✕</button>
+                            </div>
+                            <div class="cart-content">
+                                <!-- Элементы корзины будут динамически добавлены сюда -->
+                            </div>
+                            <div class="cart-footer">
+                                <button class="continue-shopping">Продолжить покупки</button>
+                                <div class="total-section">
+                                    <span class="total-price"></span>
+                                    <button class="checkout">Оформить заказ</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="container bottom">
+                <div class="header-bottom__left">
+                    <div class="bottons-delete">
+                        <button type="button" class="delete-btn cancel">Скасувати</button>
+                        <div class="sort-delete__btn" style="display: none;" id="delete-button-container">
+                            <button type="button" class="delete-btn remove">
+                                <i class="fa-solid fa-xmark rem"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-bottom__right">
+                    <div class="select-wrapper">
+                        <div class="select-arrow-3"></div>
+                        <div class="select-arrow-3"></div>
+                        <select>
+                            <option value="item1">За рейтингом</option>
+                            <option value="item2">Від дешевих до дорогих</option>
+                            <option value="item3">Від дорогих до дешевих</option>
+                        </select>
+                    </div>
+                    <div class="grid-buttons">
+                        <label class="grid-many__btn "  id="checkbox-active__input">
+                            <input type="checkbox" name="grid" value="large" class="checkbox-input " />
+                            <i class="fa-solid fa-table-cells-large grid-many"></i>
+                        </label>
+
+                        <label class="grid-more__btn">
+                            <input type="checkbox" name="grid" value="small" class="checkbox-input" />
+                            <i class="fa-solid fa-table-cells"></i>
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="shop-section">
+        <div class="shop-container">
+            <div class="sidebar">
+                <div class="sidebar-top__lists">
+                    <div class="sidebar-dropdown">
+                        <i class="fa-solid fa-table-cells-large all-items"></i>
+                        <span class="items">Всі товари</span>
+            
+                        <!-- Смартфоны, ТВ и электроника -->
+                        <div class="smartphone-item">
+                            <i class="fa-solid fa-mobile-screen-button item"></i>
+                            <span class="items">Смартфони, ТВ і <br> електроніка</span>
+                        </div>
+                        <div class="submenu" id="submenu-electronics">
+                            <a href="#"  class="subItem">Мобільні пристрої</a>
+                            <a href="#" class="subItem">Телевізори</a>
+                            <a href="#" class="subItem">Електроніка</a>
+                        </div>
+            
+                        <!-- Одяг та взуття -->
+                        <div class="smartphone-item">
+                            <i class="fa-solid fa-shirt item"></i>
+                            <span class="items">Одяг та взуття</span>
+                        </div>
+                        <div class="submenu" id="submenu-clothes ">
+                            <a href="#" class="subItem">Сорочки</a>
+                            <a href="#" class="subItem">Взуття</a>
+                        </div>
+                    </div>
+                    
+                    <div id="sidebar-bottom-lists"></div>
+                </div>
+            </div>
+            
+            <div id="productGrid" class="grid"></div>
+        </div>
+    </section>
+    <script src="../frontend/assets/js/API.js"></script>
+    <script src="../frontend/assets/js/cartModal.js"></script>
+    <script src="../frontend/assets/js/main.js"> </script>
+
+</body>
+
+</html>
