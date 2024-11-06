@@ -40,4 +40,4 @@ class ProductService {
     
 }
 
-const productService = new ProductService("http://localhost:5000/api/products");
+const productService = new ProductService("https://clon-rozetka.onrender.com/api/products");
