@@ -1,7 +1,9 @@
 //АЯКС ЗАПРОС В ООП НА ОСНОВЕ КЛАССОВ
 
+
+
 class ProductService {
-    constructor(apiUrl) {
+    constructor(apiUrl = API_URL ) {
         this.apiUrl = apiUrl;
     }
 
@@ -40,4 +42,4 @@ class ProductService {
     
 }
 
-const productService = new ProductService("https://clon-rozetka.onrender.com/api/products");
+const productService = new ProductService();
